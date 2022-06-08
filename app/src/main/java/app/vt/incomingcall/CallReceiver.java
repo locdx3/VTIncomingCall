@@ -33,7 +33,7 @@ public class CallReceiver extends PhonecallReceiver {
 
     @Override
     protected void onIncomingCallStarted(Context ctx, String number, Date start) {
-        String msg = "Incoming call: " + number + " at " + dateToString(start) + "\n";
+        String msg = "Incoming call: " + number + " at " + dateToString(start) + System.getProperty("line.separator");
         System.out.println("LocDX CallReceiver.onIncomingCallStarted " + msg);
 
         SharedPreferences prefs = ctx.getSharedPreferences("VT_DEMO", MODE_PRIVATE);
