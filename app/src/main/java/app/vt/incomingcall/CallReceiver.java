@@ -23,18 +23,12 @@ public class CallReceiver extends PhonecallReceiver {
     protected void onOutgoingCallStarted(Context ctx, String number, Date start) {
         String msg = "start outgoing call: " + number + " at " + start;
         System.out.println("LocDX CallReceiver.onOutgoingCallStarted " + msg);
-        Toast.makeText(ctx.getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
-//        tvPhone.setText(msg);
     }
 
     @Override
     protected void onOutgoingCallEnded(Context ctx, String number, Date start, Date end) {
         String msg = "end outgoing call: " + number + " at " + end;
         System.out.println("LocDX CallReceiver.onOutgoingCallEnded " + msg);
-        Log.d("###", msg);
-        Toast.makeText(ctx.getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
-
-//        tvPhone.setText(msg);
     }
 
     @Override
@@ -57,20 +51,12 @@ public class CallReceiver extends PhonecallReceiver {
     protected void onIncomingCallEnded(Context ctx, String number, Date start, Date end) {
         String msg = "end incoming call: " + number + " at " + end;
         System.out.println("LocDX CallReceiver.onIncomingCallEnded " + msg);
-        Log.d("###", msg);
-        Toast.makeText(ctx.getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
-
-//        tvPhone.setText(msg);
     }
 
     @Override
     protected void onMissedCall(Context ctx, String number, Date missed) {
         String msg = "missed call: " + number + " at " + missed;
         System.out.println("LocDX CallReceiver.onMissedCall " + msg);
-        Log.d("###", msg);
-        Toast.makeText(ctx.getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
-
-//        tvPhone.setText(msg);
     }
 
     private String dateToString(Date date) {
